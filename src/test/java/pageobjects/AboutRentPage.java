@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AboutRentPage {
     private WebDriver driver;
+
     //Конструктор
     public AboutRentPage(WebDriver driver) {
         this.driver = driver;
@@ -15,22 +16,22 @@ public class AboutRentPage {
     //Локаторы полей//
 
     //Поле "Когда привезти самокат"
-    private  By calendarField = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
+    private By calendarField = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
 
     //Поле "Срок аренды"
-    private  By periodField = By.xpath(".//div[@class = 'Dropdown-placeholder']");
+    private By periodField = By.xpath(".//div[@class = 'Dropdown-placeholder']");
 
     //Строка со сроком аренды
-    private  By firstRowInPeriodDropDownList = By.xpath(".//div[(@role = 'option') and (text() = 'сутки')]");
+    private By firstRowInPeriodDropDownList = By.xpath(".//div[(@role = 'option') and (text() = 'сутки')]");
 
     //Чекбокс цвета самоката
-    private  By blackColourCheckBox = By.xpath(".//input[@id = 'black']");
+    private By blackColourCheckBox = By.xpath(".//input[@id = 'black']");
 
     //Поле "Комментарий для курьера"
-    private  By commentField = By.xpath(".//input[@placeholder='Комментарий для курьера']");
+    private By commentField = By.xpath(".//input[@placeholder='Комментарий для курьера']");
 
     //Кнопка "Заказать"
-    private  By orderButton = By.xpath(".//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM' and (text() = 'Заказать')]");
+    private By orderButton = By.xpath(".//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM' and (text() = 'Заказать')]");
 
     //Кнопка "Да"
     private By yesButton = By.xpath(".//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM' and (text() = 'Да')]");
@@ -74,11 +75,9 @@ public class AboutRentPage {
     }
 
     public String checkTextOrderHasBeenPlaced() {
-       return driver.findElement(orderHasBeenPlacedText).getText();
+        return driver.findElement(orderHasBeenPlacedText).getText();
 
     }
-
-
 
 
 }

@@ -9,6 +9,7 @@ import pageobjects.MainPage;
 
 public class CheckTextInDropDownListTest {
     private WebDriver driver;
+
     @Test
     public void checkTextInDropDownList() {
         driver = new ChromeDriver();
@@ -26,6 +27,7 @@ public class CheckTextInDropDownListTest {
         Assert.assertEquals(expectedText, actualText);
 
     }
+
     @After
     public void teardown() {
         driver.quit();

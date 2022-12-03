@@ -36,6 +36,7 @@ public class MakeOrderTest {
             };
 
         }
+
         private WebDriver driver;
 
         @Test
@@ -76,7 +77,7 @@ public class MakeOrderTest {
             String expectedText = "Заказ оформлен";
 
             //Сравнить полученный и фактический текст:
-            Assert.assertEquals(expectedText, actualText );
+            Assert.assertEquals(expectedText, actualText);
         }
 
     /*@After
