@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 public class MainPage {
     //Создаем переменную driver
     private WebDriver driver;
-
     //Конструктор
     public MainPage(WebDriver driver) {
         this.driver = driver;
@@ -14,35 +13,33 @@ public class MainPage {
     //Главная страница:
     //Локаторы полей//
 
-    // Кнопка "Заказать" в хедере
-    private By buttonOrderInHeader = By.cssSelector(".Button_Button__ra12g");
 
-    // Стрелка на выпадающем списке
-    private By arrow = By.className("accordion__button");
+    //Стрелка в выпадающем списке
+    private String accordionHeading = "accordion__heading-";
 
-    //Ответ на первый вопрос в выпадающем списке
-    private By textInFirstQuestion = By.xpath(".//p[text() = 'Сутки — 400 рублей. Оплата курьеру — наличными или картой.']");
+    //Ответ на вопрос в выпадающем списке
+    private String accordionPanel = "accordion__panel-";
 
     //Кнока куки "Да все привыкли"
-
     private By cookieButton = By.cssSelector(".App_CookieButton__3cvqF");
+
 
 
     //Методы//
 
     // Кликнуть на кнопку "Заказать"
-    public void clickOrderButtonInHeader() {
-        driver.findElement(buttonOrderInHeader).click();
+    public void clickOrderButton(String buttonOrderClass) {
+    driver.findElement(By.cssSelector(buttonOrderClass)).click();
     }
 
     //Кликнуть на стрелку в выпадающем списке
-    public void clickArrowInDropDownList() {
-        driver.findElement(arrow).click();
+    public void clickArrowInDropDownList (String headingNumber) {
+        driver.findElement(By.id(accordionHeading + headingNumber)).click();
     }
 
     //Получить текст первого вопроса
-    public String getTextInDropDownList() {
-        return driver.findElement(textInFirstQuestion).getText();
+    public String getTextInDropDownList(String panelNumber) {
+        return driver.findElement(By.id(accordionPanel + panelNumber)).getText();
     }
 
     //Кликнуть на кнопку куки "Да все привыкли"
