@@ -29,7 +29,7 @@ public class MakeOrderTest {
             this.orderButtonClass = orderButton;
         }
 
-        @Parameterized.Parameters
+        @Parameterized.Parameters(name = "{index}:Test with cssLocator: {3}")
         public static Object[][] getTestData() {
             return new Object[][]{
                     {"Леголас", "Гринлиф", "Лихолесье", ".Button_Button__ra12g"},
