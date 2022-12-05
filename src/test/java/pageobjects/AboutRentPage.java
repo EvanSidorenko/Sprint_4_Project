@@ -35,8 +35,9 @@ public class AboutRentPage {
 
     //Кнопка "Да"
     private By yesButton = By.xpath(".//button[@class = 'Button_Button__ra12g Button_Middle__1CSJM' and (text() = 'Да')]");
-
+    //Текст "Заказ оформлен"
     private By orderHasBeenPlacedText = By.xpath(".//div[(@class = 'Order_ModalHeader__3FDaJ') and (text() ='Заказ оформлен')]");
+
     //Методы//
 
     //Ввод даты
@@ -65,15 +66,16 @@ public class AboutRentPage {
     }
 
     //Кликнуть на кнопку "Заказать"
-
     public void clickMakeOrderButton() {
         driver.findElement(orderButton).click();
     }
 
+    //Кликнуть на кнопку "Да"
     public void clickYesButton() {
         driver.findElement(yesButton).click();
     }
 
+    //Проверить отображение текста "Заказ оформлен"
     public String checkTextOrderHasBeenPlaced() {
         return driver.findElement(orderHasBeenPlacedText).getText();
 

@@ -38,23 +38,27 @@ public class ForWhoTheScooterPage {
     public void fillNameField(String name) {
         driver.findElement(nameField).sendKeys(name);
     }
-
+    //Заполнить поле Фамилия
     public void fillSonameField(String soName) {
         driver.findElement(sonameField).sendKeys(soName);
     }
 
+    //Заполнить поле Адрес
     public void fillAddressField(String address) {
         driver.findElement(addressField).sendKeys(address);
     }
 
+    //Заполнить поле Метро
     public void fillMetroStationField() {
         driver.findElement(metroStationField).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
     }
 
+    //Заполнить поле Телефон
     public void fillPhoneNumberField() {
         driver.findElement(phoneNumber).sendKeys("89995159939");
     }
 
+    //Тап на кнопку Далее
     public void clickContinueButton() {
         driver.findElement(continueButton).click();
     }
