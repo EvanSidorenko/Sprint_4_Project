@@ -10,10 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageobjects.MainPage;
 
+@RunWith(Parameterized.class)
 public class CheckTextInDropDownList {
-
-    @RunWith(Parameterized.class)
-    public static class Parameters1 {
 
         private final String headingNumber;
         private final String panelNumber;
@@ -21,7 +19,7 @@ public class CheckTextInDropDownList {
         private final String expectedText;
 
 
-        public Parameters1( String headingNumber, String panelNumber, String expectedText) {
+        public CheckTextInDropDownList( String headingNumber, String panelNumber, String expectedText) {
             this.headingNumber = headingNumber;
             this.panelNumber = panelNumber;
             this.expectedText = expectedText;
@@ -73,4 +71,4 @@ public class CheckTextInDropDownList {
         }
 
     }
-}
+
